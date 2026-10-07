@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/hr";
+const API_URL = "/api/hr";
 
 const queryInput = document.getElementById("queryInput");
 const sendBtn = document.getElementById("sendBtn");
