@@ -4,6 +4,11 @@ const queryInput = document.getElementById("queryInput");
 const sendBtn = document.getElementById("sendBtn");
 const chatArea = document.getElementById("chatArea");
 
+
+// =========================
+// SEND QUERY
+// =========================
+
 async function sendQuery() {
     const query = queryInput.value.trim();
 
@@ -45,24 +50,76 @@ async function sendQuery() {
 }
 
 
-// Quick action buttons
+// =========================
+// QUICK ACTION BUTTONS
+// =========================
+
 function quickQuery(query) {
     queryInput.value = query;
     sendQuery();
 }
 
 
-// Add message to chat
+// =========================
+// SAFE HTML ESCAPE
+// =========================
+
+function escapeHTML(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+// =========================
+// FORMAT AI RESPONSE
+// =========================
+
+function formatMessage(message) {
+
+    if (message === null || message === undefined) {
+        return "";
+    }
+
+    let formatted = String(message);
+
+    // Escape HTML first for safety
+    formatted = escapeHTML(formatted);
+
+    // Convert **bold text** into real bold formatting
+    formatted = formatted.replace(
+        /\*\*(.*?)\*\*/g,
+        "<strong>$1</strong>"
+    );
+
+    // Convert line breaks into HTML line breaks
+    formatted = formatted.replace(/\n/g, "<br>");
+
+    return formatted;
+}
+
+
+// =========================
+// ADD MESSAGE TO CHAT
+// =========================
+
 function addMessage(message, type) {
+
     const messageDiv = document.createElement("div");
 
     messageDiv.className = `message ${type}`;
 
     const bubble = document.createElement("div");
 
-    bubble.className = "message-bubble";
+    // IMPORTANT:
+    // CSS already uses .message-content
+    bubble.className = "message-content";
 
-    bubble.textContent = message;
+    // Render formatted text safely
+    bubble.innerHTML = formatMessage(message);
 
     messageDiv.appendChild(bubble);
 
@@ -72,22 +129,29 @@ function addMessage(message, type) {
 }
 
 
-// Display AI response
+// =========================
+// DISPLAY AI RESPONSE
+// =========================
+
 function displayResponse(data) {
 
     if (!data) {
+
         addMessage(
             "Sorry, I didn't receive a response.",
             "bot"
         );
+
         return;
     }
 
 
-    // ⭐ NEW AI RESPONSE
-    // If AI generated a natural-language response,
-    // show that instead of formatting raw tool data.
+    // =========================
+    // AI NATURAL-LANGUAGE RESPONSE
+    // =========================
+
     if (data.responseText) {
+
         addMessage(
             data.responseText,
             "bot"
@@ -97,8 +161,12 @@ function displayResponse(data) {
     }
 
 
-    // Error response
+    // =========================
+    // ERROR RESPONSE
+    // =========================
+
     if (data.success === false) {
+
         addMessage(
             "⚠️ " + data.message,
             "bot"
@@ -108,10 +176,14 @@ function displayResponse(data) {
     }
 
 
-    // Leave Balance
+    // =========================
+    // LEAVE BALANCE
+    // =========================
+
     if (data.balance) {
 
-        let message = "📊 Leave Balance\n\n";
+        let message =
+            "📊 Leave Balance\n\n";
 
         Object.entries(data.balance).forEach(
             ([type, value]) => {
@@ -135,7 +207,10 @@ function displayResponse(data) {
     }
 
 
-    // Payslip
+    // =========================
+    // PAYSLIP
+    // =========================
+
     if (data.payslip) {
 
         const p = data.payslip;
@@ -161,7 +236,10 @@ Net Pay: ₹${p.netPay.toLocaleString("en-IN")}`;
     }
 
 
-    // Company Policies
+    // =========================
+    // COMPANY POLICIES
+    // =========================
+
     if (data.results) {
 
         if (data.results.length === 0) {
@@ -198,7 +276,10 @@ ${policy.content}
     }
 
 
-    // Leave Request
+    // =========================
+    // LEAVE REQUEST
+    // =========================
+
     if (data.request) {
 
         const r = data.request;
@@ -223,7 +304,10 @@ Status: ${r.status}`;
     }
 
 
-    // Current Date & Time
+    // =========================
+    // CURRENT DATE & TIME
+    // =========================
+
     if (data.currentDateTime) {
 
         const message =
@@ -245,7 +329,10 @@ Time: ${new Date(
     }
 
 
-    // Generic message
+    // =========================
+    // GENERIC MESSAGE
+    // =========================
+
     if (data.message) {
 
         addMessage(
@@ -257,7 +344,10 @@ Time: ${new Date(
     }
 
 
-    // Fallback
+    // =========================
+    // FALLBACK
+    // =========================
+
     addMessage(
         JSON.stringify(data, null, 2),
         "bot"
@@ -265,7 +355,10 @@ Time: ${new Date(
 }
 
 
-// Typing indicator
+// =========================
+// TYPING INDICATOR
+// =========================
+
 function showTyping() {
 
     const typing =
@@ -276,10 +369,16 @@ function showTyping() {
     typing.className =
         "message bot";
 
-    typing.innerHTML =
-        `<div class="message-bubble">
-            🤖 Thinking...
-        </div>`;
+    const bubble =
+        document.createElement("div");
+
+    bubble.className =
+        "message-content";
+
+    bubble.textContent =
+        "🤖 Thinking...";
+
+    typing.appendChild(bubble);
 
     chatArea.appendChild(typing);
 
@@ -287,7 +386,10 @@ function showTyping() {
 }
 
 
-// Remove typing indicator
+// =========================
+// REMOVE TYPING INDICATOR
+// =========================
+
 function removeTyping() {
 
     const typing =
@@ -299,7 +401,10 @@ function removeTyping() {
 }
 
 
-// Scroll chat to bottom
+// =========================
+// SCROLL CHAT
+// =========================
+
 function scrollToBottom() {
 
     chatArea.scrollTop =
@@ -307,7 +412,10 @@ function scrollToBottom() {
 }
 
 
-// Enter key support
+// =========================
+// ENTER KEY SUPPORT
+// =========================
+
 queryInput.addEventListener(
     "keydown",
     function (event) {
