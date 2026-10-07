@@ -1,0 +1,92 @@
+[
+  {
+    "empId": "EMP101",
+    "type": "casual",
+    "total": 12,
+    "used": 5
+  },
+  {
+    "empId": "EMP101",
+    "type": "sick",
+    "total": 10,
+    "used": 3
+  },
+  {
+    "empId": "EMP101",
+    "type": "earned",
+    "total": 15,
+    "used": 6
+  },
+  {
+    "empId": "EMP102",
+    "type": "casual",
+    "total": 12,
+    "used": 7
+  },
+  {
+    "empId": "EMP102",
+    "type": "sick",
+    "total": 10,
+    "used": 4
+  },
+  {
+    "empId": "EMP102",
+    "type": "earned",
+    "total": 15,
+    "used": 5
+  },
+  {
+    "empId": "EMP103",
+    "type": "casual",
+    "total": 12,
+    "used": 2
+  },
+  {
+    "empId": "EMP103",
+    "type": "sick",
+    "total": 10,
+    "used": 6
+  },
+  {
+    "empId": "EMP103",
+    "type": "earned",
+    "total": 15,
+    "used": 4
+  },
+  {
+    "empId": "EMP104",
+    "type": "casual",
+    "total": 12,
+    "used": 8
+  },
+  {
+    "empId": "EMP104",
+    "type": "sick",
+    "total": 10,
+    "used": 2
+  },
+  {
+    "empId": "EMP104",
+    "type": "earned",
+    "total": 15,
+    "used": 7
+  },
+  {
+    "empId": "EMP105",
+    "type": "casual",
+    "total": 12,
+    "used": 4
+  },
+  {
+    "empId": "EMP105",
+    "type": "sick",
+    "total": 10,
+    "used": 3
+  },
+  {
+    "empId": "EMP105",
+    "type": "earned",
+    "total": 15,
+    "used": 2
+  }
+]

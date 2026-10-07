@@ -1,0 +1,82 @@
+[
+  {
+    "empId": "EMP101",
+    "month": "2026-08",
+    "basic": 35000,
+    "hra": 14000,
+    "deductions": 4200,
+    "netPay": 44800
+  },
+  {
+    "empId": "EMP101",
+    "month": "2026-09",
+    "basic": 35000,
+    "hra": 14000,
+    "deductions": 4200,
+    "netPay": 44800
+  },
+  {
+    "empId": "EMP102",
+    "month": "2026-08",
+    "basic": 30000,
+    "hra": 12000,
+    "deductions": 3600,
+    "netPay": 38400
+  },
+  {
+    "empId": "EMP102",
+    "month": "2026-09",
+    "basic": 30000,
+    "hra": 12000,
+    "deductions": 3600,
+    "netPay": 38400
+  },
+  {
+    "empId": "EMP103",
+    "month": "2026-08",
+    "basic": 40000,
+    "hra": 16000,
+    "deductions": 5000,
+    "netPay": 51000
+  },
+  {
+    "empId": "EMP103",
+    "month": "2026-09",
+    "basic": 40000,
+    "hra": 16000,
+    "deductions": 5000,
+    "netPay": 51000
+  },
+  {
+    "empId": "EMP104",
+    "month": "2026-08",
+    "basic": 32000,
+    "hra": 12800,
+    "deductions": 3900,
+    "netPay": 40900
+  },
+  {
+    "empId": "EMP104",
+    "month": "2026-09",
+    "basic": 32000,
+    "hra": 12800,
+    "deductions": 3900,
+    "netPay": 40900
+  },
+  {
+    "empId": "EMP105",
+    "month": "2026-08",
+    "basic": 28000,
+    "hra": 11200,
+    "deductions": 3200,
+    "netPay": 36000
+  },
+  {
+    "empId": "EMP105",
+    "month": "2026-09",
+    "basic": 28000,
+    "hra": 11200,
+    "deductions": 3200,
+    "netPay": 36000
+  }
+]

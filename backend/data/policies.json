@@ -1,0 +1,68 @@
+[
+  {
+    "policyId": "POL001",
+    "title": "Work From Home Policy",
+    "category": "workplace",
+    "content": "Employees may work from home with prior manager approval. Regular attendance and availability during working hours are required. Work from home may be restricted for roles that require physical presence.",
+    "keywords": [
+      "work from home",
+      "wfh",
+      "remote work",
+      "home"
+    ]
+  },
+  {
+    "policyId": "POL002",
+    "title": "Notice Period Policy",
+    "category": "employment",
+    "content": "Employees are required to serve a notice period of 30 days before resignation. The notice period may be changed or waived only with approval from the authorized HR and management team.",
+    "keywords": [
+      "notice period",
+      "resignation",
+      "notice",
+      "leaving company"
+    ]
+  },
+  {
+    "policyId": "POL003",
+    "title": "Leave Carry Forward Policy",
+    "category": "leave",
+    "content": "Employees may carry forward unused earned leaves to the next year subject to the company's annual leave limits. Casual and sick leaves cannot normally be carried forward unless specifically approved under an applicable company rule.",
+    "keywords": [
+      "carry forward",
+      "carry leaves",
+      "next year",
+      "leave carry forward",
+      "casual leave",
+      "sick leave",
+      "earned leave"
+    ]
+  },
+  {
+    "policyId": "POL004",
+    "title": "Leave Application Policy",
+    "category": "leave",
+    "content": "Employees should submit leave requests in advance whenever possible. Leave approval depends on available leave balance and manager approval. The employee must provide the dates and a valid reason for the leave.",
+    "keywords": [
+      "leave application",
+      "apply leave",
+      "leave approval",
+      "leave request",
+      "manager approval"
+    ]
+  },
+  {
+    "policyId": "POL005",
+    "title": "Salary and Payslip Policy",
+    "category": "payroll",
+    "content": "Employees can access their own monthly payslip containing salary components such as basic salary, HRA, deductions and net pay. Salary information belonging to another employee is private and must not be disclosed.",
+    "keywords": [
+      "salary",
+      "payslip",
+      "pay slip",
+      "salary breakup",
+      "deductions",
+      "net pay"
+    ]
+  }
+]

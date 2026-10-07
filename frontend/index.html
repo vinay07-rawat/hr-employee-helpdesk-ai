@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HR Employee Helpdesk</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">HR</div>
+
+                <div>
+                    <h2>HR Helpdesk</h2>
+                    <span>Employee Assistant</span>
+                </div>
+            </div>
+
+            <div class="employee-card">
+
+                <div class="avatar">
+                    V
+                </div>
+
+                <div>
+                    <strong>EMP102</strong>
+                    <span>Employee</span>
+                </div>
+
+                <div class="status">
+                    ●
+                </div>
+
+            </div>
+
+            <div class="quick-section">
+
+                <p>QUICK ACTIONS</p>
+
+                <button class="quick-btn" onclick="quickQuery('EMP102 ka leave balance batao')">
+                    🏖️ Leave Balance
+                </button>
+
+                <button class="quick-btn" onclick="quickQuery('EMP102 ki September 2026 payslip dikhao')">
+                    💰 Payslip
+                </button>
+
+                <button class="quick-btn" onclick="quickQuery('notice period policy kya hai?')">
+                    📋 Policies
+                </button>
+
+                <button class="quick-btn" onclick="quickQuery('aaj ki date kya hai?')">
+                    🕐 Date & Time
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="header">
+
+                <div>
+                    <h1>HR Employee Helpdesk</h1>
+                    <p>Ask anything about your employee services</p>
+                </div>
+
+                <div class="online">
+                    <span>●</span>
+                    AI Assistant Online
+                </div>
+
+            </header>
+
+
+            <!-- Chat Area -->
+            <section class="chat-area" id="chatArea">
+
+                <div class="welcome">
+
+                    <div class="welcome-icon">
+                        🤖
+                    </div>
+
+                    <h2>How can I help you today?</h2>
+
+                    <p>
+                        Ask me about leave balance, payslips,
+                        company policies or leave applications.
+                    </p>
+
+                    <div class="suggestions">
+
+                        <button onclick="quickQuery('EMP102 ka leave balance batao')">
+                            Check my leave balance
+                        </button>
+
+                        <button onclick="quickQuery('EMP102 ki September 2026 payslip dikhao')">
+                            View my payslip
+                        </button>
+
+                        <button onclick="quickQuery('notice period policy kya hai?')">
+                            Search HR policy
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Input -->
+            <div class="input-area">
+
+                <div class="input-box">
+
+                    <input
+                        type="text"
+                        id="queryInput"
+                        placeholder="Ask HR anything..."
+                        autocomplete="off"
+                    >
+
+                    <button id="sendBtn" onclick="sendQuery()">
+                        Send
+                    </button>
+
+                </div>
+
+                <p class="privacy-note">
+                    🔒 Your employee information is protected.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

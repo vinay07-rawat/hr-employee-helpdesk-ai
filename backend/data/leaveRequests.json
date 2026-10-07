@@ -1,0 +1,95 @@
+[
+  {
+    "requestId": "LR001",
+    "empId": "EMP101",
+    "fromDate": "2026-09-10",
+    "toDate": "2026-09-11",
+    "reason": "Personal work",
+    "status": "approved",
+    "appliedAt": "2026-09-05T10:30:00"
+  },
+  {
+    "requestId": "LR002",
+    "empId": "EMP102",
+    "fromDate": "2026-08-18",
+    "toDate": "2026-08-19",
+    "reason": "Family function",
+    "status": "approved",
+    "appliedAt": "2026-08-10T09:15:00"
+  },
+  {
+    "requestId": "LR003",
+    "empId": "EMP103",
+    "fromDate": "2026-09-22",
+    "toDate": "2026-09-23",
+    "reason": "Medical appointment",
+    "status": "pending",
+    "appliedAt": "2026-09-15T14:20:00"
+  },
+  {
+    "requestId": "LR004",
+    "empId": "EMP102",
+    "fromDate": "2026-10-12",
+    "toDate": "2026-10-14",
+    "reason": "Personal work",
+    "daysRequested": 3,
+    "leaveType": "earned",
+    "status": "pending",
+    "appliedAt": "2026-10-07T00:28:36.760Z"
+  },
+  {
+    "requestId": "LR005",
+    "empId": "EMP102",
+    "fromDate": "2026-10-12",
+    "toDate": "2026-10-13",
+    "reason": "personal work",
+    "daysRequested": 2,
+    "leaveType": "earned",
+    "status": "pending",
+    "appliedAt": "2026-10-07T03:53:36.419Z"
+  },
+  {
+    "requestId": "LR006",
+    "empId": "EMP102",
+    "fromDate": "2026-10-12",
+    "toDate": "2026-10-14",
+    "reason": "personal work",
+    "daysRequested": 3,
+    "leaveType": "earned",
+    "status": "pending",
+    "appliedAt": "2026-10-07T05:33:04.028Z"
+  },
+  {
+    "requestId": "LR007",
+    "empId": "EMP102",
+    "fromDate": "2026-10-12",
+    "toDate": "2026-10-14",
+    "reason": "personal work",
+    "daysRequested": 3,
+    "leaveType": "earned",
+    "status": "pending",
+    "appliedAt": "2026-10-07T05:35:11.879Z"
+  },
+  {
+    "requestId": "LR008",
+    "empId": "EMP102",
+    "fromDate": "2026-10-12",
+    "toDate": "2026-10-14",
+    "reason": "Personal work",
+    "daysRequested": 3,
+    "leaveType": "earned",
+    "status": "pending",
+    "appliedAt": "2026-10-07T05:37:15.024Z"
+  },
+  {
+    "requestId": "LR009",
+    "empId": "EMP102",
+    "fromDate": "2026-10-12",
+    "toDate": "2026-10-14",
+    "reason": "personal work",
+    "daysRequested": 3,
+    "leaveType": "earned",
+    "status": "pending",
+    "appliedAt": "2026-10-07T05:41:06.072Z"
+  }
+]
