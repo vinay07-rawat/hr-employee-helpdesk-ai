@@ -27,7 +27,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--bg);
     color: var(--text);
-    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -43,7 +44,8 @@ button {
 .app {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
 }
 
 /* =========================
@@ -171,6 +173,7 @@ button {
     display: flex;
     flex-direction: column;
     min-width: 0;
+    min-height: 0;
     height: 100%;
 }
 
@@ -183,6 +186,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .header h1 {
@@ -216,6 +220,7 @@ button {
     overflow-x: hidden;
     padding: 35px;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 .welcome {
@@ -400,13 +405,21 @@ button {
 
 @media (max-width: 600px) {
 
+    html,
     body {
+        height: 100dvh;
+    }
+
+    body {
+        height: 100dvh;
+        min-height: 100dvh;
         overflow: hidden;
     }
 
     .app {
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
+        min-height: 100dvh;
     }
 
     /* Hide desktop sidebar */
@@ -418,6 +431,8 @@ button {
     .main {
         width: 100%;
         min-width: 0;
+        min-height: 0;
+        height: 100%;
     }
 
     /* =========================
@@ -452,8 +467,11 @@ button {
 
     .chat-area {
         width: 100%;
+        flex: 1;
+        min-height: 0;
         padding: 16px 12px;
         overflow-x: hidden;
+        overflow-y: auto;
     }
 
     /* =========================
@@ -513,7 +531,6 @@ button {
         transform: none;
     }
 
-    /* Better touch feedback */
     .suggestions button:active {
         transform: scale(0.98);
         border-color: var(--primary);
@@ -545,7 +562,8 @@ button {
 
     .input-area {
         width: 100%;
-        padding: 9px 10px 11px;
+        flex-shrink: 0;
+        padding: 9px 10px calc(11px + env(safe-area-inset-bottom));
     }
 
     .input-box {
